@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@700&family=Montserrat:wght@400;700&family=Open+Sans:wght@300&family=Oswald&family=Raleway:ital,wght@1,200&family=Roboto:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    font-family: 'Kh Battambang';
+}
+ /*Header*/
+Header {
+    width: 100%;
+    background-color: black;
+}
+Header .head-logo {
+    width: 80%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+Header .head-logo img {
+    width: 80px;
+}
+Header .menu {
+    background-color: #fa1939;
+}
+Header .menu ul {
+    width: 80%;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+}
+Header .menu ul li {
+    padding: 15px;
+    margin: 0 5px;
+
+}
+Header .menu ul li a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+Header .menu ul li:hover a{
+    color: white;
+}
+.active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.active a{
+    color: white !important;
+}
+/*Main*/
+main{
+    width: 80%;
+    margin: 20px auto;
+}
+main .popular {
+    width: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Kh Battambang';
+    cursor: pointer;
+}
+main .popular-news{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .popular .popular-news .news-left {
+    width: 55%;
+    height: 250px;
+    background-color: brown;
+    color: white;
+    margin: 3px 0;
+    position: relative;
+    overflow: hidden;
+}
+main .popular .popular-news .news-left::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0,0,0,0.8),rgba(255,255,255,0.2));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+main .popular .popular-news .news-left .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+main .popular .popular-news .news-left .title {
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.8s;
+}
+main .popular-news .news-left .des {
+    position: absolute;
+    font-size: 13px;
+    z-index: 3;
+    padding: 0 20px;
+    bottom: -60px;
+    transition: 0.8s;
+}
+main .popular-news .news-left .date {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+main .popular-news .news-left:hover::before {
+    background: linear-gradient(0deg, black,rgba(105,105,105,0.2));
+}
+main .popular-news .news-left:hover .title {
+    color: #fa1939;
+    bottom: 90px;
+    transition: 0.8s;
+}
+main .popular-news .news-left:hover .des {
+    bottom: 35px;
+    transition: 0.8s;
+}
+main .popular .popular-news .news-right {
+    width: 45%;
+    height: 250px;
+    background-color: blue;
+    color: white;
+    margin: 3px 0;
+    position: relative;
+    overflow: hidden;
+}
+main .popular .popular-news .news-right::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8),rgba(255,255,255,0.2));
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+main .popular .popular-news .news-right .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+main .popular .popular-news .news-right .title {
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    transition: 0.8s;
+}
+main .popular .popular-news .news-right .des {
+    position: absolute;
+    z-index: 3;
+    font-size: 13px;
+    bottom: -75px;
+    padding: 0 20px;
+    transition: 0.8s;
+}
+main .popular .popular-news .news-right .date {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px 20px;
+    z-index: 3;
+}
+main .popular-news .news-right:hover::before {
+    background: linear-gradient(0deg, black,rgba(105,105,105,0.3));
+}
+main .popular-news .news-right:hover .title {
+    color: #fa1939;
+    bottom: 100px;
+    transition: 0.8s;
+}
+main .popular-news .news-right:hover .des{
+    bottom: 35px;
+    transition: 0.8s;
+}
+main .popular .popular-ads{
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .popular-ads .ads{
+    width: 100%;
+    height: 250px;
+    background-color: gray;
+}
+ /* Video */
+main .video {
+    width: 100%;
+    margin: 100px auto;
+    /* background-color: antiquewhite; */
+    border-top: 3px solid #fa1939;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 5px 5px 10px -5px gray;
+}
+main .video .title-news{
+    background-color: #fa1939;
+    width: fit-content;
+    color: white;
+    font-family: 'Kh Battambang';
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    cursor: pointer;
+}
+main .video .clip {
+    position: absolute;
+    top: -45px;
+    left: 92px;
+    border-top: 22px solid transparent;
+    border-left: 20px solid #fa1939;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #fa1939;
+}
+main .video .top {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+main .video .top .news{
+    width: 33%;
+    height: 100%;
+}main .video .news .image{
+    background-color: black;
+    width: 100%;
+    height: 75%;
+}
+main .video .news img:hover {
+    transform: scale(0.97);
+    transition: 0.8s;
+}
+main .video .top .news .description {
+    font-weight: 700;
+    font-family: 'Kh Battambang';
+    line-height: 25px;
+    margin: 10px 0;
+}
+main .video .buttom{
+    width: 100%;
+    display: flex;
+}
+main .video .buttom .buttom-news {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+main .video .buttom .buttom-news .news {
+    width: 23%;
+    height: 160px;
+    overflow: hidden;
+
+}
+main .video .buttom .buttom-news .news .image {
+    object-fit: cover;
+    height: 100px;
+}
+main .video .buttom .des-news {
+    font-family: 'Kh Battambang';
+    font-size: 12px;
+    line-height: 20px;
+
+}
+main .video .buttom .buttom-ads {
+    width: 30%;
+    height: 150px;
+    margin-left: 25px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* entertainment */
+main .entertainment{
+    width: 100%;
+    /* height: 400px; */
+    /* background-color: antiquewhite; */
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px -5px gray;
+    border-top: 3px solid #FA5480;
+    position: relative;
+}
+main .entertainment .title-news {
+    background: #FA5480;
+    width: fit-content;
+    color: white;
+    font-family: 'Kh Battambang';
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    cursor: pointer;
+}
+main .entertainment .clip {
+    position: absolute;
+    top: -45px;
+    left: 105px;
+    border-top: 22px solid transparent;
+    border-left: 20px solid #FA5480;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #FA5480;
+}
+main .entertainment .left{
+    width: 32%;
+    height: 350px;
+    background: #FA5480;
+}
+main .image{
+    background-color: black;
+    width: 100%;
+    height: 75%;
+}
+main img:hover {
+    transform: scale(0.98);
+    transition: 0.6s;
+}
+main .left .news .description {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Kh Battambang';
+    color: white;
+    padding: 10px 20px;
+}
+main .right {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+main .right .right-news {
+    width: 24%;
+    height: 160px;
+    overflow: hidden;
+    /* margin-right: 10px; */
+}
+main .right .image {
+    object-fit: cover;
+    height: 100px;
+}
+main .right .des-news {
+    font-family: 'Kh Battambang';
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+/* technology */
+main .technology {
+    width: 100%;
+    /* height: 400px; */
+    /* background-color: antiquewhite; */
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px -5px gray;
+    border-top: 3px solid #38C378;
+    position: relative;
+}
+main .technology .title-news{
+    background: #38C378;
+    width: fit-content;
+    color: white;
+    font-family: 'Kh Battambang';
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    cursor: pointer;
+}
+main .technology .clip {
+    position: absolute;
+    top: -45px;
+    left: 128px;
+    border-top: 22px solid transparent;
+    border-left: 20px solid #38C378;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #38C378;
+
+}
+main .technology .left{
+    width: 32%;
+    /* height: 350px; */
+    background: #38C378;
+}
+/* life-society */
+main .life-society {
+    width: 100%;
+    /* height: 400px; */
+    /* background-color: antiquewhite; */
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px -5px gray;
+    border-top: 3px solid #F9A62B;
+    position: relative;
+}
+main .life-society .title-news{
+    background: #F9A62B;
+    width: fit-content;
+    color: white;
+    font-family: 'Kh Battambang';
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    cursor: pointer;
+}
+main .life-society .clip {
+    position: absolute;
+    top: -45px;
+    left: 153px;
+    border-top: 22px solid transparent;
+    border-left: 20px solid #F9A62B;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #F9A62B;
+
+}
+main .life-society .left{
+    width: 32%;
+    /* height: 350px; */
+    background: #F9A62B;
+}
+/* sports */
+main .sports {
+    width: 100%;
+    /* height: 400px; */
+    /* background-color: antiquewhite; */
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 10px -5px gray;
+    border-top: 3px solid #4390F8;
+    position: relative;
+}
+main .sports .title-news{
+    background: #4390F8;
+    width: fit-content;
+    color: white;
+    font-family: 'Kh Battambang';
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    cursor: pointer;
+}
+main .sports .clip {
+    position: absolute;
+    top: -45px;
+    left: 91px;
+    border-top: 22px solid transparent;
+    border-left: 20px solid #4390F8;
+    border-right: 20px solid transparent;
+    border-bottom: 22px solid #4390F8;
+
+}
+main .sports .left{
+    width: 32%;
+    /* height: 350px; */
+    background: #4390F8;
+}
+/* footer */
+footer .container {
+    width: 100%;
+    height: 300px;
+    padding-top: 40px !important;
+    padding: 0 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .left {
+    width: 33%;
+    height: 100%;
+}
+footer .container .left img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+footer .container .left .small{
+    font-size: 14px;
+    font-weight: normal;
+    color: #ABAAAB;
+    font-family: 'Kh Battambang';
+    margin-bottom: 11px;
+}
+footer .container .left .small a{
+    text-decoration: none;
+    color: #ABAAAB;
+    font-weight: normal;
+}
+footer .container .left .small a:hover{
+    color: white;
+}
+footer .container .left strong {
+    color: white;
+    font-family: 'Kh Battambang';
+    font-size: 14px;
+    line-height: 1.6;
+}
+footer .container .center {
+    width: 33%;
+    height: 100%;
+}
+footer .container .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ABAAAB;
+    font-family: 'Kh Battambang';
+}
+footer .container .center p {
+    color: #ABAAAB;
+    font-size: 14px;
+    font-family: 'Kh Battambang';
+    margin-bottom: 11px;
+}
+footer .container .center ul {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .center ul li{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+footer .container .center ul img {
+    width: 100%;
+    height: 100%;
+}
+footer .container .right {
+    width: 30%;
+    height: 100%;
+}
+footer .container .right .list-social {
+    font-style: normal;
+}
+footer .container .right .list-social a{
+    font-size: 25px;
+    margin-right: 5px;
+    color: #ABAAAB;
+}
+footer .container .right .small {
+    margin-top: 12px;
+    color: #ABAAAB;
+}
+footer .container .right strong {
+    color: white;
+    font-family: 'Kh Battambang';
+    font-size: 14px;
+    line-height: 1.6;
+}
+footer .container .right .small a{
+    color:#ABAAAB;
+    text-decoration: none;
+}
